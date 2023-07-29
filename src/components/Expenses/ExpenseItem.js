@@ -10,7 +10,7 @@ const ExpenseItem = (props) =>{
     const titleChange = ()=>{
         setTitle('updated title');
         console.log(title);
-        console.log("Samer")
+        // console.log(title)
     }
     const priceHandler = () =>{
         setPrice(100);
