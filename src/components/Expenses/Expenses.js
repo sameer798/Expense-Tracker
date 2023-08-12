@@ -3,6 +3,7 @@ import Card from "../UI/Card";
 import "./Expenses.css";
 import ExpenseFilter from './ExpenseFilter';
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 
 const Expense = (props) => {
@@ -20,6 +21,7 @@ const filteredExpenses = props.item.filter(expense =>{
   return (
     <Card className="expenses">
       <ExpenseFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
+      <ExpensesChart expenses={filteredExpenses}/>
       <ExpensesList items={filteredExpenses}/>
      
       {/* <ExpenseItem title={props.item[0].title} date={props.item[0].date} amount={props.item[0].amount}></ExpenseItem>
